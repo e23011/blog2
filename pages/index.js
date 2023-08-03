@@ -2,7 +2,8 @@ import Hero from 'components/hero'
 
 const params = {
   title: "CUBE",
-subtitle: "アウトプットしていくサイト" ,}
+subtitle: "アウトプットしていくサイト" ,
+}
 const Home = () => {
   return (
     <>
