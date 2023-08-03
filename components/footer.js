@@ -1,4 +1,8 @@
+import Logo from 'components/logo'
+
 const Footer = () => (
-  <footer>FOOTER</footer>
+  <footer>
+    <Logo />
+  </footer>
 )
 export default Footer
