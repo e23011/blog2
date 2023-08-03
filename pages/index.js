@@ -1,16 +1,13 @@
-import Header from 'components/header'
 import Hero from 'components/hero'
-import Footer from 'components/footer'
 
+const params = {
+  title: "CUBE",
+subtitle: "アウトプットしていくサイト" ,}
 const Home = () => {
   return (
     <>
-      <Header/>
-      <main>
-      <Hero/>  
-      </main>
-      <Footer/>
-    </>
-  )
+    < Hero {...params} />
+    </>  
+)
 }
 export default Home
