@@ -3,6 +3,17 @@
   gap: 2em;
 }
 
-.list a:hover{
+@media (hover: hover) {
+.list Link:hover{
   color:var(--accent)
+  }
+}
+
+@media (hover: none){
+  .list Link{
+    -webkit-tap-highlight-color: transparent;
+  } 
+  .list Link:active{
+    color: var(--accent)
+  }
 }
