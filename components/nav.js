@@ -4,7 +4,7 @@ import styles from 'styles/nav.module.css'
 const Nav = () => {
   return(
     <nav>
-      <ul classname={styles.list}>
+      <ul className={styles.list}>
         <li>
           <Link href="/">Home</Link>
         </li>
