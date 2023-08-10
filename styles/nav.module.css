@@ -14,6 +14,6 @@
     -webkit-tap-highlight-color: transparent;
   } 
   .list Link:active{
-    color: var(--accent)
+    color: var(--accent);
   }
 }
