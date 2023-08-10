@@ -1,7 +1,9 @@
+import styles from 'styles/hero.module.css'
+
 const Hero = ({title, subtitle, imageOn = false}) =>(
-  <div>
-    <h1>{title}</h1>
-    <p>{subtitle}</p>
+  <div classname={styles.text}>
+    <h1 classname={styles.title}>{title}</h1>
+    <p classname={styles.subtitle}>{subtitle}</p>
     { imageOn && <figure>[画像]</figure> }
   </div>
  )
