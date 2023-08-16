@@ -1,3 +1,4 @@
+import Container  from 'components/container'
 import Hero from 'components/hero'
 
 const params = {
@@ -8,7 +9,9 @@ imageOn: true
 const Home = () => {
   return (
     <>
+    <Container>
     < Hero {...params} />
+    </Container>
     </>  
 )
 }
