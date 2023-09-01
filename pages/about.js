@@ -1,3 +1,4 @@
+import Meta from 'components/meta'
 import Container  from 'components/container'
 import Hero from 'components/hero'
 import PostBody from 'components/post-body'
@@ -13,6 +14,7 @@ const About = () => {
   return (
       <>
       <Container>
+        <Meta pageTitle='アバウト'/>
       < Hero {...params} />
       <figure>
       <Image
