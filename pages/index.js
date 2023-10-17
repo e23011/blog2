@@ -2,19 +2,17 @@ import Meta from 'components/meta'
 import Container  from 'components/container'
 import Hero from 'components/hero'
 
-const params = {
-  title: "CUBE",
+const getStaticProps = async context => ({
+props: { title: "CUBE",
 subtitle: "アウトプットしていくサイト" ,
 imageOn: true
 }
-const Home = () => {
-  return (
-    <>
+})
+const Home = props =>  (
     <Container>
       <Meta />
-    < Hero {...params} />
+    < Hero {...props} />
     </Container>
-    </>  
 )
-}
+export {getStaticProps}
 export default Home
