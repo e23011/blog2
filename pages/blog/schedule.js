@@ -5,6 +5,7 @@ import Image from 'next/legacy/image'
 import {TwoColumn,TwoColumnMain,TwoColumnSidebar} from 'components/two-column'
 import PostBody from 'components/post-body'
 import ConvertBody from 'components/convert-body'
+import Postcategories from 'components/post-categories'
 
 const Schedule = ({title,publish,content,eyecatch,categories}) =>{
   return (
@@ -26,10 +27,13 @@ const Schedule = ({title,publish,content,eyecatch,categories}) =>{
         <TwoColumn>
           <TwoColumnMain>
             <PostBody>
+              {/* {content} */}
               <ConvertBody contentHTML ={content}/>
               </PostBody>
           </TwoColumnMain>
-          <TwoColumnSidebar></TwoColumnSidebar>
+          <TwoColumnSidebar>
+            <Postcategories categories= {categories}/>
+          </TwoColumnSidebar>
         </TwoColumn>
       </article>
 
