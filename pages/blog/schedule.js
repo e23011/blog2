@@ -8,6 +8,7 @@ import {TwoColumn,TwoColumnMain,TwoColumnSidebar} from 'components/two-column'
 import PostBody from 'components/post-body'
 import ConvertBody from 'components/convert-body'
 import Postcategories from 'components/post-categories'
+import {getPlaiceholder} from 'plaiceholder'
 
 const Schedule = ({title,publish,content,eyecatch,categories,description}) =>{
   return (
@@ -30,7 +31,8 @@ const Schedule = ({title,publish,content,eyecatch,categories,description}) =>{
           layout='responsive'
           width={eyecatch.width}
           height={eyecatch.height}
-          
+          // placeholder='blur'
+          // blurDataURL={eyecatch.blurDataURL}
           />
         </figure>
         <TwoColumn>
@@ -53,13 +55,15 @@ const getStaticProps = async() => {
   const slug = 'schedule'
   const post = await getPostBySlug(slug)
   const description = extractText(post.content)
-  console.log(description)
+  const eyecatch = post.eyecatch ?? eyecatchLocal  
+  const {base64} = await getPlaiceholder(eyecatch.url)
+  eyecatch.blurDataURL = base64
   return{
     props:{
       title: post.title,
       publish: post.publishDate,
       content: post.content,
-      eyecatch: post.eyecatch,
+      eyecatch: eyecatch,
       categories: post.categories, 
       description:description,
     },
