@@ -14,6 +14,7 @@ import PostBody from 'components/post-body'
 import ConvertBody from 'components/convert-body'
 import Postcategories from 'components/post-categories'
 import Pagination from 'components/pagination'
+import {eyecatchLocal} from 'lib/constants'
 // import { getPlaiceholder } from 'plaiceholder'
 
 const Post = ({
@@ -48,6 +49,7 @@ const Post = ({
             height={eyecatch.height}
             // placeholder='blur'
             // blurDataURL={eyecatch.blurDataURL}
+            
           />
         </figure>
         <TwoColumn>
