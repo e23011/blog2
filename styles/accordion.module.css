@@ -1,0 +1,19 @@
+.open{
+  border:solid 1px var(--gray-75)
+}
+
+/* 見出し */
+.heading{
+  font-size: var(--body);
+}
+
+.heading button{
+  all: unset;
+  outline: revert;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1em;
+  display: flex;
+}
